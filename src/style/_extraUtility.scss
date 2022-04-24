@@ -1,0 +1,21 @@
+@include at-950px {
+  .hide {
+    // display: none;
+    width: 100vw;
+    transform: translateY(-1500px);
+    transition: all 1s ease-in-out;
+    background-color: green;
+    z-index: 100;
+    width: 90vw;
+    height: 100vh;
+  }
+
+  .no-display {
+    display: none;
+    transition: all 4s ease-in-out;
+  }
+
+  // .nav{
+
+  // }
+}
