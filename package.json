@@ -2,7 +2,7 @@
   "name": "render-web",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html"
