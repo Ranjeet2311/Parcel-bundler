@@ -35,11 +35,6 @@
     display: flex;
     align-items: center;
 
-    // @include at-950px {
-    //   // margin-top: 22rem;
-    //   // background-color: green;
-    // }
-
     .nav-list {
       display: flex;
       justify-content: center;
@@ -66,7 +61,6 @@
 
         @include at-950px {
           width: 100%;
-          // text-align: center;
           margin: 20px 0;
         }
 

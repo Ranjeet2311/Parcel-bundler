@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap");
 // font-family: 'Work Sans', sans-serif;
 
-$font-main: "Work Sans", sans-serif;
-$font-color: black;
-
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+$font-main: "Work Sans", sans-serif;
+$font-color: black;
 
 @import "_responsiveness.scss";
 @import "_extraUtility.scss";

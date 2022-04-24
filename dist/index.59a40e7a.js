@@ -530,16 +530,17 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _formbouncerjs = require("formbouncerjs");
 var _formbouncerjsDefault = parcelHelpers.interopDefault(_formbouncerjs);
 var _styleScss = require("../style/style.scss");
+var validate = new _formbouncerjsDefault.default("form"); /*Initialising Form Validation*/ 
 const open = document.querySelector("#menu-open");
 const close = document.querySelector("#menu-close");
 const navlist = document.querySelector("#nav-list");
 const btn = document.querySelector("#btn");
 const arrow = document.querySelector("#arrow");
-// const success = document.querySelector("#success");
+const success = document.querySelector("#success");
 window.addEventListener("load", ()=>{
     close.classList.add("no-display");
 });
-open.addEventListener("click", ()=>{
+/*Burger Menu*/ open.addEventListener("click", ()=>{
     open.classList.add("no-display");
     close.classList.remove("no-display");
     navlist.classList.remove("hide");
@@ -555,7 +556,7 @@ btn.addEventListener("mouseover", ()=>{
 btn.addEventListener("mouseout", ()=>{
     arrow.classList.remove("arrow-animation");
 });
-btn.addEventListener("click", (e)=>{
+/*Form input data capture*/ btn.addEventListener("click", (e)=>{
     let firstNameValue = document.getElementById("name").value;
     let lastNameValue = document.getElementById("surname").value;
     let emailValue = document.getElementById("email").value;
@@ -570,7 +571,6 @@ btn.addEventListener("click", (e)=>{
     }
     e.preventDefault();
 });
-var validate = new _formbouncerjsDefault.default("form");
 
 },{"../style/style.scss":"fOVVj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","formbouncerjs":"2lTCv"}],"fOVVj":[function() {},{}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {

@@ -1,17 +1,20 @@
 import Bouncer from "formbouncerjs";
-
 import "../style/style.scss";
+
+var validate = new Bouncer("form"); /*Initialising Form Validation*/
 
 const open = document.querySelector("#menu-open");
 const close = document.querySelector("#menu-close");
 const navlist = document.querySelector("#nav-list");
 const btn = document.querySelector("#btn");
 const arrow = document.querySelector("#arrow");
-// const success = document.querySelector("#success");
+const success = document.querySelector("#success");
 
 window.addEventListener("load", () => {
   close.classList.add("no-display");
 });
+
+/*Burger Menu*/
 
 open.addEventListener("click", () => {
   open.classList.add("no-display");
@@ -31,6 +34,8 @@ btn.addEventListener("mouseout", () => {
   arrow.classList.remove("arrow-animation");
 });
 
+/*Form input data capture*/
+
 btn.addEventListener("click", (e) => {
   let firstNameValue = document.getElementById("name").value;
   let lastNameValue = document.getElementById("surname").value;
@@ -48,5 +53,3 @@ btn.addEventListener("click", (e) => {
 
   e.preventDefault();
 });
-
-var validate = new Bouncer("form");
