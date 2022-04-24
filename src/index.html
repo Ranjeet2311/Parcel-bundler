@@ -30,7 +30,7 @@
                   <div class="apply">
                         <a href="#"> <button class="btn"> Apply </button> </a>
                   </div>
-                  <div class="burger-menu ">
+                  <div class="burger-menu">
                         <img id="menu-open" class="mobile-menu" src="./images/hamburger.svg" alt="menu-open">
                         <img id="menu-close" class="mobile-menu" src="./images/close.svg" alt="menu-close">
                   </div>
@@ -81,25 +81,38 @@
 
             <div class="form-wrap">
 
-                  <form action="#" class="form" id="form" autocomplete="off">
-                        <label for="name">Name</label>
-                        <input type="text" class="form__input form-control" placeholder="Enter your name"
-                              autocomplete="off" name="name" id="name" />
-                        <label for="name">Surname</label>
-                        <input type="text" class="form__input form-control" placeholder="Enter your name"
-                              autocomplete="off" name="name" id="name" />
-                        <label for="email">Email</label>
-                        <input type="email" class="form__input form-control" placeholder="Enter your email"
-                              autocomplete="off" name="email" id="email" />
-                        <button class="btn btn-primary" id="submit-btn">Subscribe <i
-                                    class="fa-solid fa-arrow-right"></i> </button>
+                  <form class="form">
+                        <div class="form-group">
+                              <label for="text">Name</label>
+                              <input type="text" name="name" id="name" minlength="2" maxlength="24" required
+                                    autocomplete="off" pattern="[a-zA-Z'-'\s]*" placeholder="first Name">
+                        </div>
+
+                        <div class="form-group">
+                              <label for="text">Surname</label>
+                              <input type="text" name="surname" id="surname" minlength="2" maxlength="24" required
+                                    autocomplete="off" pattern="[a-zA-Z'-'\s]*" placeholder="last Name">
+                        </div>
+                        <div class="form-group">
+                              <label for="email">Email</label>
+                              <input type="email" name="email" id="email" minlength="7" maxlength="60" required
+                                    autocomplete="off" placeholder="Email">
+                        </div>
+
+
+                        <button id="btn" class="btn" type="submit">Submit <span id="arrow"><i
+                                          class="fa-solid fa-arrow-right"></i></span>
+                        </button>
+
+
+                        <!-- <p id="success" class="success"></p> -->
+                        <p id="success"></p>
+
+
                   </form>
 
             </div>
       </div>
-
-
-
 
 
 

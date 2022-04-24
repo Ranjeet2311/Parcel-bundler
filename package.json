@@ -14,6 +14,7 @@
     "parcel": "^2.5.0"
   },
   "dependencies": {
+    "formbouncerjs": "^1.4.6",
     "just-validate": "^3.5.2"
   }
 }

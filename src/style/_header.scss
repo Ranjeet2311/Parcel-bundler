@@ -17,9 +17,6 @@
     flex-direction: column;
     height: 6.5rem;
   }
-  // @include at-600px {
-  //   flex-direction: column;
-  // }
 
   .logo-wrap {
     padding: 0 40px;
@@ -112,6 +109,12 @@
           outline: none;
           font-size: 20px;
           cursor: pointer;
+
+          @include at-600px {
+            width: 6rem;
+            font-size: 16px;
+            margin: 0.1rem;
+          }
 
           &:hover {
             box-shadow: 0 2px 4px rgb(182, 182, 182);

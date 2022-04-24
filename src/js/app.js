@@ -1,9 +1,13 @@
-import JustValidate from "just-validate";
+import Bouncer from "formbouncerjs";
+
 import "../style/style.scss";
 
 const open = document.querySelector("#menu-open");
 const close = document.querySelector("#menu-close");
 const navlist = document.querySelector("#nav-list");
+const btn = document.querySelector("#btn");
+const arrow = document.querySelector("#arrow");
+// const success = document.querySelector("#success");
 
 window.addEventListener("load", () => {
   close.classList.add("no-display");
@@ -20,28 +24,29 @@ close.addEventListener("click", () => {
   navlist.classList.add("hide");
 });
 
-const validation = new JustValidate("#form");
+btn.addEventListener("mouseover", () => {
+  arrow.classList.add("arrow-animation");
+});
+btn.addEventListener("mouseout", () => {
+  arrow.classList.remove("arrow-animation");
+});
 
-validation
-  .addField("#name", [
-    {
-      rule: "minLength",
-      value: 3,
-      errorMessage: "Name is required",
-    },
-    {
-      rule: "maxLength",
-      value: 30,
-      errorMessage: "Name is required",
-    },
-  ])
-  .addField("#email", [
-    {
-      rule: "required",
-      errorMessage: "Email is required",
-    },
-    {
-      rule: "email",
-      errorMessage: "Email is invalid!",
-    },
-  ]);
+btn.addEventListener("click", (e) => {
+  let firstNameValue = document.getElementById("name").value;
+  let lastNameValue = document.getElementById("surname").value;
+  let emailValue = document.getElementById("email").value;
+
+  if (firstNameValue && lastNameValue && emailValue) {
+    console.log(`${firstNameValue}  ${lastNameValue}  ${emailValue}`);
+    success.classList.add("success");
+    success.innerHTML = `Name: ${firstNameValue} <br> Surname: ${lastNameValue} <br> Email: ${emailValue}`;
+  } else {
+    console.log("fill all input fields to them see in console");
+    success.classList.add("fail");
+    success.innerHTML = "Ooops! Uncomplete form";
+  }
+
+  e.preventDefault();
+});
+
+var validate = new Bouncer("form");

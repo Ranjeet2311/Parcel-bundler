@@ -47,6 +47,10 @@
       margin: 10px 20px;
       box-shadow: 0 1px 10px rgb(180, 178, 178);
 
+      @include at-950px {
+        margin-top: 2rem;
+      }
+
       &:hover {
         box-shadow: 0 2px 4px black;
       }

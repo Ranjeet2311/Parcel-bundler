@@ -1,6 +1,5 @@
 @include at-950px {
   .hide {
-    // display: none;
     width: 100vw;
     transform: translateY(-1500px);
     transition: all 1s ease-in-out;
@@ -14,8 +13,9 @@
     display: none;
     transition: all 4s ease-in-out;
   }
+}
 
-  // .nav{
-
-  // }
+.arrow-animation {
+  transform: translateX(10);
+  transition: all 0.3s ease-in-out;
 }

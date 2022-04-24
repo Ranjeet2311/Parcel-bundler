@@ -23,6 +23,11 @@ body {
   }
 }
 
+.arrow-animation {
+  transition: all .3s ease-in-out;
+  transform: translateX(10px);
+}
+
 .header {
   height: 3.5rem;
   z-index: 100;
@@ -139,6 +144,14 @@ body {
   font-size: 20px;
 }
 
+@media (max-width: 600px) {
+  .header .nav .apply a .btn {
+    width: 6rem;
+    margin: .1rem;
+    font-size: 16px;
+  }
+}
+
 .header .nav .apply a .btn:hover {
   box-shadow: 0 2px 4px #b6b6b6;
 }
@@ -216,6 +229,12 @@ body {
   box-shadow: 0 1px 10px #b4b2b2;
 }
 
+@media (max-width: 950px) {
+  .news .cards-wrap .card {
+    margin-top: 2rem;
+  }
+}
+
 .news .cards-wrap .card:hover {
   box-shadow: 0 2px 4px #000;
 }
@@ -253,15 +272,30 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 4rem;
   padding: 4rem 0;
   display: flex;
 }
 
+.subscribe-form h2 {
+  text-align: center;
+  color: #303030;
+  margin-bottom: 6rem;
+  font-family: Work Sans, sans-serif;
+  font-size: 46px;
+}
+
 .subscribe-form .form-wrap {
-  width: 400px;
+  width: 450px;
   border-radius: 12px;
   padding: 20px 40px;
   box-shadow: 0 2px 20px #d3d0d0;
+}
+
+@media (max-width: 600px) {
+  .subscribe-form .form-wrap {
+    width: 70%;
+  }
 }
 
 .subscribe-form .form-wrap .form {
@@ -272,14 +306,27 @@ body {
   display: flex;
 }
 
-.subscribe-form .form-wrap .form label {
+@media (max-width: 600px) {
+  .subscribe-form .form-wrap .form {
+    width: 70%;
+  }
+}
+
+.subscribe-form .form-wrap .form .form-group {
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1rem;
+  display: flex;
+}
+
+.subscribe-form .form-wrap .form .form-group label {
   margin-top: 1rem;
   padding: 4px 8px;
   font-family: Work Sans, sans-serif;
   font-size: 16px;
 }
 
-.subscribe-form .form-wrap .form input {
+.subscribe-form .form-wrap .form .form-group input {
   border: 1px solid gray;
   border-radius: 3px;
   outline: none;
@@ -289,15 +336,51 @@ body {
   font-size: 16px;
 }
 
+.subscribe-form .form-wrap .form .form-group .error-message {
+  color: red;
+  font-family: Work Sans, sans-serif;
+}
+
 .subscribe-form .form-wrap .form .btn {
   width: 200px;
   color: #fff;
-  background-color: #3287db;
+  cursor: pointer;
+  background-color: #717cff;
   border: none;
   border-radius: 8px;
+  justify-content: space-between;
+  align-items: center;
   margin: 1rem 0;
+  padding: 1rem 1.5rem;
   font-family: Work Sans, sans-serif;
   font-size: 25px;
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .subscribe-form .form-wrap .form .btn {
+    width: 100%;
+  }
+}
+
+.subscribe-form .form-wrap .form .btn span {
+  transition: all .3s ease-in-out;
+}
+
+.subscribe-form .form-wrap .form .success {
+  color: #fff;
+  text-align: center;
+  background-color: green;
+  padding: 1rem;
+  box-shadow: 0 1px 6px #c4c4c5;
+}
+
+.subscribe-form .form-wrap .form .fail {
+  color: #fff;
+  text-align: center;
+  background-color: red;
+  padding: 1rem;
+  box-shadow: 0 1px 6px #c4c4c5;
 }
 
 /*# sourceMappingURL=index.08963856.css.map */
