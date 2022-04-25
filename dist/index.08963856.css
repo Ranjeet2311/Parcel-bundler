@@ -88,7 +88,11 @@ body {
 }
 
 .header .nav .nav-list li {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   list-style: none;
+  display: flex;
 }
 
 @media (max-width: 950px) {
@@ -104,6 +108,25 @@ body {
   font-family: Work Sans, sans-serif;
   font-size: 16px;
   text-decoration: none;
+}
+
+.header .nav .nav-list li a:hover {
+  color: #717cff;
+  transition: all .4s ease-in-out;
+}
+
+.header .nav .nav-list li a:after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: #717cff;
+  margin: 8px 2px;
+  display: block;
+}
+
+.header .nav .nav-list li a:hover:after {
+  width: 60%;
+  transition: all .4s ease-in-out;
 }
 
 @media (max-width: 950px) {
