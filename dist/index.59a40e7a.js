@@ -556,8 +556,7 @@ btn.addEventListener("mouseover", ()=>{
 btn.addEventListener("mouseout", ()=>{
     arrow.classList.remove("arrow-animation");
 });
-/*Form input data capture*/ const form = document.getElementById("form");
-btn.addEventListener("click", (e)=>{
+/*Form input data capture*/ btn.addEventListener("click", (e)=>{
     e.preventDefault();
     let firstName = document.getElementById("name");
     let lastName = document.getElementById("surname");
@@ -565,6 +564,7 @@ btn.addEventListener("click", (e)=>{
     if (firstName.value && lastName.value && email.value) {
         console.log(`${firstName.value}  ${lastName.value}  ${email.value}`);
         success.classList.add("success");
+        success.classList.remove("fail");
         success.innerHTML = `Name: ${firstName.value} <br> Surname: ${lastName.value} <br> Email: ${email.value}`;
         firstName.value = "";
         lastName.value = "";
@@ -572,6 +572,7 @@ btn.addEventListener("click", (e)=>{
     } else {
         console.log("fill all input fields to them see in console");
         success.classList.add("fail");
+        success.classList.remove("success");
         success.innerHTML = "Ooops! Uncomplete form";
     }
 });

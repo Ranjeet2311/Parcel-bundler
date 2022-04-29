@@ -36,8 +36,6 @@ btn.addEventListener("mouseout", () => {
 
 /*Form input data capture*/
 
-const form = document.getElementById("form");
-
 btn.addEventListener("click", (e) => {
   e.preventDefault();
 
@@ -48,6 +46,7 @@ btn.addEventListener("click", (e) => {
   if (firstName.value && lastName.value && email.value) {
     console.log(`${firstName.value}  ${lastName.value}  ${email.value}`);
     success.classList.add("success");
+    success.classList.remove("fail");
     success.innerHTML = `Name: ${firstName.value} <br> Surname: ${lastName.value} <br> Email: ${email.value}`;
 
     firstName.value = "";
@@ -56,6 +55,7 @@ btn.addEventListener("click", (e) => {
   } else {
     console.log("fill all input fields to them see in console");
     success.classList.add("fail");
+    success.classList.remove("success");
     success.innerHTML = "Ooops! Uncomplete form";
   }
 });
