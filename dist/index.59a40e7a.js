@@ -556,20 +556,24 @@ btn.addEventListener("mouseover", ()=>{
 btn.addEventListener("mouseout", ()=>{
     arrow.classList.remove("arrow-animation");
 });
-/*Form input data capture*/ btn.addEventListener("click", (e)=>{
-    let firstNameValue = document.getElementById("name").value;
-    let lastNameValue = document.getElementById("surname").value;
-    let emailValue = document.getElementById("email").value;
-    if (firstNameValue && lastNameValue && emailValue) {
-        console.log(`${firstNameValue}  ${lastNameValue}  ${emailValue}`);
+/*Form input data capture*/ const form = document.getElementById("form");
+btn.addEventListener("click", (e)=>{
+    e.preventDefault();
+    let firstName = document.getElementById("name");
+    let lastName = document.getElementById("surname");
+    let email = document.getElementById("email");
+    if (firstName.value && lastName.value && email.value) {
+        console.log(`${firstName.value}  ${lastName.value}  ${email.value}`);
         success.classList.add("success");
-        success.innerHTML = `Name: ${firstNameValue} <br> Surname: ${lastNameValue} <br> Email: ${emailValue}`;
+        success.innerHTML = `Name: ${firstName.value} <br> Surname: ${lastName.value} <br> Email: ${email.value}`;
+        firstName.value = "";
+        lastName.value = "";
+        email.value = "";
     } else {
         console.log("fill all input fields to them see in console");
         success.classList.add("fail");
         success.innerHTML = "Ooops! Uncomplete form";
     }
-    e.preventDefault();
 });
 
 },{"../style/style.scss":"fOVVj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","formbouncerjs":"2lTCv"}],"fOVVj":[function() {},{}],"gkKU3":[function(require,module,exports) {
